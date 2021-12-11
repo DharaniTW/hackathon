@@ -30,18 +30,6 @@ function searchAnime(event) {
 
   const form = new FormData(this);
   const query = form.get("search");
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch(
-  //         `${base_url}/search/anime?q=${query}&page=1`
-  //       );
-  //       const data = await response.json();
-  //       console.log(data);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-  //   fetchData();
 
   fetch(`${base_url}/search/anime?q=${query}&page=1`)
     .then((res) => res.json())
